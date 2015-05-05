@@ -1,6 +1,10 @@
+
+#ifndef INTERVALINTSET_H
+#define INTERVALINTSET_H
+
+
 #include "IIntSet.h"
 #include "structs.h"
-
 
 
 class IntervalIntSet : public IIntSet
@@ -14,5 +18,7 @@ public:
 
 	bool Contains(int element);
 	void Add(int toAdd);
-	void ToString(char *, int max);
+	void ToString(char *str, int max);
 };
+
+#endif

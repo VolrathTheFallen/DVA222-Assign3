@@ -1,11 +1,14 @@
+
+#ifndef UNIONINTSET_H
+#define UNIONINTSET_H
+
 #include "IIntSet.h"
 #include "structs.h"
-
 
 class UnionIntSet : public IIntSet
 {
 private:
-	Interval* data //union
+	Interval* data; //union
 
 public:
 	UnionIntSet();
@@ -13,5 +16,7 @@ public:
 
 	bool Contains(int element);
 	void Add(int toAdd);
-	void ToString(char *, int max);
+	void ToString(char *str, int max);
 };
+
+#endif

@@ -4,5 +4,5 @@ IIntSet::IIntSet() {};
 
 IIntSet* IIntSet::Union(IIntSet &other)
 {
-
+	return nullptr;
 }

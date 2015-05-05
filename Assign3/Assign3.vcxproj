@@ -68,14 +68,12 @@
     <ClCompile Include="BasicIntSet.cpp" />
     <ClCompile Include="IIntSet.cpp" />
     <ClCompile Include="IntervalIntSet.cpp" />
-    <ClCompile Include="IntSet.cpp" />
     <ClCompile Include="UnionIntSet.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BasicIntSet.h" />
     <ClInclude Include="IIntSet.h" />
     <ClInclude Include="IntervalIntSet.h" />
-    <ClInclude Include="resource.h" />
     <ClInclude Include="structs.h" />
     <ClInclude Include="UnionIntSet.h" />
   </ItemGroup>

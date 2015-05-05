@@ -1,3 +1,4 @@
+#include "IIntSet.h"
 #include "IntervalIntSet.h"
 #include "structs.h"
 
@@ -22,6 +23,7 @@ IntervalIntSet::~IntervalIntSet()
 bool IntervalIntSet::Contains(int element)
 {
 
+	return false;
 }
 
 void IntervalIntSet::Add(int toAdd)
@@ -30,7 +32,7 @@ void IntervalIntSet::Add(int toAdd)
 	assert(data);
 }
 
-void IntervalIntSet::ToString(char *, int max)
+void IntervalIntSet::ToString(char *str, int max)
 {
 
 }

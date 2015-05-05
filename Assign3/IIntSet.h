@@ -1,4 +1,5 @@
-
+#ifndef IINTSET_H
+#define IINTSET_H
 
 
 class IIntSet
@@ -16,7 +17,7 @@ public:
 
 	/* Return an array of integers that contains all the individual values in this set. */
 	//virtual char* ToString() = 0;
-	virtual void ToString(char *, int max) = 0;
+	virtual void ToString(char *str, int max) = 0;
 
 	/* Return a set that is the union of this set and 'other'. All elements contained
 	* in either this set or in 'other' will be contained in the resulting set. */
@@ -26,3 +27,4 @@ protected:
 	int numElements;
 	int doubleHere;
 };
+#endif

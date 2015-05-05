@@ -22,6 +22,7 @@ UnionIntSet::~UnionIntSet()
 bool UnionIntSet::Contains(int element)
 {
 
+	return false;
 }
 
 void UnionIntSet::Add(int toAdd)
@@ -31,7 +32,7 @@ void UnionIntSet::Add(int toAdd)
 	assert(data);
 }
 
-void UnionIntSet::ToString(char *, int max)
+void UnionIntSet::ToString(char *str, int max)
 {
 
 }
