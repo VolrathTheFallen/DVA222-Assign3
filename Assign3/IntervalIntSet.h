@@ -4,7 +4,7 @@
 
 
 #include "IIntSet.h"
-#include "structs.h"
+#include "Interval.h"
 #include <string>
 
 class IntervalIntSet : public IIntSet
@@ -21,6 +21,7 @@ public:
 	void Add(int toAdd);
 	//void ToString(char *str, int max);
 	void ToString(std::string &str);
+	void SortIntervalSet();
 };
 
 #endif

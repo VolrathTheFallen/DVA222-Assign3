@@ -21,13 +21,21 @@ void main()
 	s1->Add(10);
 	s1->Add(12);
 
-	IIntSet *s2 = new IntervalIntSet();
+	IntervalIntSet *s2 = new IntervalIntSet();
 	s2->Add(20);
 	s2->Add(21);
 	s2->Add(22);
 	s2->Add(100);
 	s2->Add(101);
 	s2->Add(102);
+	s2->Add(105);
+	s2->Add(106);
+	s2->Add(108);
+	s2->Add(109);
+	s2->Add(107);
+	s2->Add(3);
+	s2->Add(4);
+	s2->Add(5);
 
 	//IIntSet *s3;
 	//s3 = s1->Union(s2);

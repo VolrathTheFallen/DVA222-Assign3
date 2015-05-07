@@ -3,12 +3,13 @@
 #define UNIONINTSET_H
 
 #include "IIntSet.h"
-#include "structs.h"
+#include "Interval.h"
 
 class UnionIntSet : public IIntSet
 {
 private:
 	Interval* data; //union
+	int numIntervals;
 
 public:
 	UnionIntSet();

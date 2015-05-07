@@ -30,6 +30,9 @@
     <ClCompile Include="UnionIntSet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Interval.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BasicIntSet.h">
@@ -41,10 +44,10 @@
     <ClInclude Include="IntervalIntSet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="structs.h">
+    <ClInclude Include="UnionIntSet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="UnionIntSet.h">
+    <ClInclude Include="Interval.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
