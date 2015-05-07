@@ -3,6 +3,7 @@
 
 #include <assert.h>
 #include <stdlib.h>
+#include <string>
 
 UnionIntSet::UnionIntSet()
 {
@@ -32,7 +33,7 @@ void UnionIntSet::Add(int toAdd)
 	assert(data);
 }
 
-void UnionIntSet::ToString(char *str, int max)
+void UnionIntSet::ToString(std::string &str)
 {
 
 }

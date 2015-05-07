@@ -5,12 +5,13 @@
 
 #include "IIntSet.h"
 #include "structs.h"
-
+#include <string>
 
 class IntervalIntSet : public IIntSet
 {
 private:
 	Interval* data;
+	int numIntervals;
 
 public:
 	IntervalIntSet();
@@ -18,7 +19,8 @@ public:
 
 	bool Contains(int element);
 	void Add(int toAdd);
-	void ToString(char *str, int max);
+	//void ToString(char *str, int max);
+	void ToString(std::string &str);
 };
 
 #endif

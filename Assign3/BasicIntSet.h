@@ -3,7 +3,7 @@
 #define BASICINTSET_H
 
 #include "IIntSet.h"
-
+#include <string>
 
 class BasicIntSet : public IIntSet
 {
@@ -16,7 +16,8 @@ public:
 
 	bool Contains(int element);
 	void Add(int toAdd);
-	void ToString(char *str, int max);
+	//void ToString(char *str, int max);
+	void ToString(std::string &str);
 };
 
 #endif

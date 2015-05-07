@@ -8,6 +8,12 @@ typedef struct Interval
 	int from;
 	int to;
 
+	Interval()
+	{
+		from = 0;
+		to = 0;
+	}
+
 	Interval(int from, int to)
 	{
 		if (from < to)
