@@ -22,7 +22,7 @@ public:
 
 	/* Return a set that is the union of this set and 'other'. All elements contained
 	* in either this set or in 'other' will be contained in the resulting set. */
-	IIntSet* Union(IIntSet &other);
+	virtual IIntSet* Union(IIntSet &other);
 
 protected:
 	int numElements;

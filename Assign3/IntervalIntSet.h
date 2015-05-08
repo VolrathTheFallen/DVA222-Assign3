@@ -11,12 +11,17 @@ class IntervalIntSet : public IIntSet
 {
 private:
 	Interval* data;
+
+protected:
 	int numIntervals;
 
 public:
 	IntervalIntSet();
+	IntervalIntSet(IntervalIntSet& iSet);
 	~IntervalIntSet();
 
+	int GetNumIntervals();
+	Interval GetIntervalAtIndex(int index);
 	bool Contains(int element);
 	void Add(int toAdd);
 	//void ToString(char *str, int max);

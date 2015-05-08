@@ -22,6 +22,20 @@ IntervalIntSet::~IntervalIntSet()
 	delete(data); //TODO: Might need to loop through and delete each interval
 }
 
+IntervalIntSet::IntervalIntSet(IntervalIntSet& iSet)
+{
+	numElements = iSet.numElements;
+	numIntervals = iSet.numIntervals;
+	doubleHere = iSet.doubleHere;
+
+	this->data = new Interval[numIntervals];
+
+	for (int i = 0; i < numIntervals; i++)
+	{
+		data[i] = iSet.data[i];
+	}
+}
+
 bool IntervalIntSet::Contains(int toFind)
 {
 	for (int i = 0; i < numIntervals; i++) 
@@ -115,3 +129,12 @@ void IntervalIntSet::SortIntervalSet()
 	qsort(data, numIntervals, sizeof(Interval), Interval::CompareInterval);
 }
 
+int IntervalIntSet::GetNumIntervals()
+{
+	return numIntervals;
+}
+
+Interval IntervalIntSet::GetIntervalAtIndex(int index)
+{
+	return data[index];
+}

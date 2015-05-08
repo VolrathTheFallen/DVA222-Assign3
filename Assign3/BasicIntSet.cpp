@@ -7,6 +7,8 @@
 #include <sstream>
 #include <iostream>
 
+#include "UnionIntSet.h"
+
 BasicIntSet::BasicIntSet()
 {
 	data = new int[2];
@@ -47,6 +49,8 @@ void BasicIntSet::Add(int toAdd)
 	}
 	
 	data[numElements-1] = toAdd; //TODO: check whether it's better to keep as sorted array, costly to sort, or unsorted, costly to search through
+
+	SortBasicIntSet();
 }
 
 
@@ -61,6 +65,37 @@ void BasicIntSet::ToString(std::string &str)
 		str += " ";
 	}
 }
+
+int BasicIntSet::CompareInt(const void* l, const void* r)
+{
+	return (*(int*)l - *(int*)r);
+
+	/*const int* _l = reinterpret_cast<const int*>(l);
+	const int* _r = reinterpret_cast<const int*>(r);
+
+	return _l < _r ? -1 : _l > _r ? 1 : 0;*/
+}
+
+void BasicIntSet::SortBasicIntSet()
+{
+	qsort(data, numElements, sizeof(int), CompareInt);
+}
+
+int BasicIntSet::GetNumElements()
+{
+	return numElements;
+}
+
+int BasicIntSet::GetElementAtIndex(int index)
+{
+	return data[index];
+}
+
+IIntSet* BasicIntSet::Union(IIntSet &other)
+{
+	return new UnionIntSet(*this, (IntervalIntSet&)other); //Probably doesnt work, should die when scope ends right?
+}
+
 
 /*
 void BasicIntSet::ToString(char *str, int max)
